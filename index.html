@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <nav class="nav-container">
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="my-portfolio">
+        <a href="index.html">MyPortfolio</a>
+      </div>
+      <div class="nav-content">
+        <ul class="ul-content">
+          <div class="option">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </div>
+          <div class="resume">
+            <li><a href="Resume.pdf">Resume</a></li>
+          </div>
+        </ul>
+      </div>
+    </nav>
+    <!-- ******************************************** Hero section  **************************************************************** -->
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <div class="my-image"></div>
+
+          <div class="hero-text">
+            <h2>Hi! I'm AJAJ AHAMED.</h2>
+
+            <p style="font-size: large; font-weight: 500">
+              - Fullstack Developer
+            </p>
+            <br />
+            <p>I build web applicaction with javascript and react.</p>
+            <a href="#contact">
+              <button class="get-in-touch">Get in touch</button>
+            </a>
+            <a href="#project">
+              <button class="browse-project">Browse Project</button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- divider line -->
+      <hr class="section-divider" />
+
+      <!-- About Me Section -->
+      <section class="about-section">
+        <h2 id="about">About Me</h2>
+        <div class="about-content">
+          <p>
+            I'm Ajaj Ahamed, a self-motivated and curious Fullstack Developer
+            with a passion for building responsive and user-friendly web
+            applications. I enjoy turning complex problems into simple, clean,
+            and efficient code.
+          </p>
+          <p>
+            My expertise lies mainly in JavaScript, React, HTML, and CSS for the
+            frontend, and I'm currently expanding my skills in backend
+            technologies to become a more well-rounded developer.
+          </p>
+          <p>
+            I love learning new tools and technologies, and I'm always looking
+            for opportunities to grow, collaborate, and create meaningful
+            digital experiences.
+          </p>
+          <div class="download-cv">
+            <a href="Resume.pdf">Download CV</a>
+          </div>
+        </div>
+      </section>
+      <section class="skills-section">
+        <h2 id="skills">Skills</h2>
+        <div class="skills-container">
+          <div
+            class="skill-box"
+            data-tooltip="Web structure with semantic tags"
+          >
+            <i class="fab fa-html5" style="color: #e34f26"></i> HTML
+          </div>
+          <div
+            class="skill-box"
+            data-tooltip="Responsive layouts, Flex/Grid, animations"
+          >
+            <i class="fab fa-css3-alt" style="color: #1572b6"></i> CSS
+          </div>
+          <div
+            class="skill-box"
+            data-tooltip="Dynamic web functionality & DOM manipulation"
+          >
+            <i class="fab fa-js" style="color: #f7df1e"></i> JavaScript
+          </div>
+          <div class="skill-box" data-tooltip="Built SPA, components, hooks">
+            <i class="fab fa-react" style="color: #61dafb"></i> React
+          </div>
+          <!-- <div
+            class="skill-box"
+            data-tooltip="Built REST APIs, OOP, multi-threading"
+          >
+            <i class="fab fa-java" style="color: #007396"></i> Java
+          </div>
+          <div
+            class="skill-box"
+            data-tooltip="Used for backend RESTful services"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/spring-3.svg"
+              alt="Spring Boot"
+              style="height: 1.3rem; vertical-align: middle; margin-right: 8px"
+            />
+            Spring Boot
+          </div>
+          <div class="skill-box" data-tooltip="Database design, queries, joins">
+            <i class="fas fa-database" style="color: #00618a"></i> MySQL
+          </div> -->
+          <div class="skill-box" data-tooltip="Version control, collaboration">
+            <i class="fab fa-git-alt" style="color: #f1502f"></i> Git & GitHub
+          </div>
+          <!-- <div class="skill-box" data-tooltip="Built and consumed APIs">
+            <i class="fas fa-network-wired" style="color: #00aaff"></i> REST API
+          </div> -->
+        </div>
+      </section>
+
+      <!--==========================  -->
+      <!-- divider line -->
+      <hr class="section-divider" />
+      <!-- project section -->
+      <h2 style="margin-left: 2.5rem" id="project">Projects</h2>
+      <div class="project-container">
+        <div class="project-grid">
+          <div class="project-level-name">Basic project</div>
+          <strong>- iNotebook</strong><br />
+          <p><strong>🛠️ Tech Stack:</strong> React, Node.js, Express, MongoDB</p>
+          <p>Stay organized with iNotebook — your secure digital notebook for all your thoughts, tasks, and ideas.</p>
+          <div class="project-view">
+            <a href="https://i-notebook-beta-sable.vercel.app/">
+              View</a
+            >
+            <a
+              href="https://github.com/ahamedajaj01/iNotebook"
+              >code</a
+            >
+          </div>
+        </div>
+        <div class="project-grid">
+          <div class="project-level-name">Intermediate project</div>
+         Coming soon...
+          <p>Project description.......</p>
+          <div class="project-view">
+            <a href="#">View</a>
+            <a href="#">code</a>
+          </div>
+        </div>
+        <div class="project-grid">
+          <div class="project-level-name">Advance project</div>
+   coming soon...
+          <p>Project description.......</p>
+          <div class="project-view">
+            <a href="#">View</a>
+            <a href="#">code</a>
+          </div>
+        </div>
+      </div>
+      <!-- divider line -->
+      <hr class="section-divider" />
+      <!-- contact me section -->
+      <section class="contact-section" id="contact">
+        <h2 id="contact">Contact Me</h2>
+        <p class="contact-intro">
+          Have a project in mind or just want to say hi? Let’s connect!
+        </p>
+
+        <div class="contact-container">
+          <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+
+          <div class="contact-info">
+            <h3>Let's Connect</h3>
+            <p><strong>Email:</strong> ahamed.ajaj01@gmail.com</p>
+            <p>
+              <strong>LinkedIn:</strong>
+              <a
+                href="https://linkedin.com/in/ajaj-ahamed-323369364"
+                target="_blank"
+                >View Profile</a
+              >
+            </p>
+            <p>
+              <strong>GitHub:</strong>
+              <a href="https://github.com/ahamedajaj01" target="_blank"
+                >Visit Repo</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--*************************************************************  Footer  section  **************************************  -->
+    <footer class="footer-container">
+      <!-- 🔗 Social Links -->
+      <p>
+        <a href="https://github.com/ahamedajaj01" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/ajaj-ahamed-323369364" target="_blank"
+          >LinkedIn</a
+        >
+        |
+        <a href="mailto:ahamed.ajaj01@gmail.com" target="_blank">Email</a>
+      </p>
+
+      <!-- 🔙 Back to Top -->
+      <p><a href="#">Back to top ↑</a></p>
+
+      <!-- © Copyright -->
+      <p class="copyright">
+        &copy; <span id="year"></span> Ajaj Ahamed. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
