@@ -4,6 +4,7 @@ import "./App.css";
 import blogify from "./assets/blogify.png";
 import complaintApp from "./assets/complaintApp.png";
 import iNotebook from "./assets/iNotebook.png";
+import fedback from "./assets/fedback.png";
 import MyResume from "./assets/My_Resume.pdf";
 const templateId = import.meta.env.VITE_META_TEMPLATE_ID;
 const serviceId = import.meta.env.VITE_META_SERVICE_ID;
@@ -223,17 +224,32 @@ const contactForm = useRef();
 
           {/* Project 4 */}
           <div className="project-grid">
-            <div className="project-level-name">Upcoming Project</div>
-            <strong>🚀 Coming Soon...</strong><br />
+            <div className="project-level-name">Full-Stack Project</div>
+            <strong>🚀 Django Feedback App</strong><br />
             <div className="project-image">
-              <img src="#" alt="Coming Soon" />
+              <img src={fedback} alt="feedbackApp" />
             </div>
-            <p>New exciting project in progress...</p>
+            <p>A Django-based web application that allows users to submit feedback,
+    view responses, and manage entries through an admin dashboard.</p>
+            <div className="project-view">
+              <a href="https://feedbackapp-production-d50a.up.railway.app/" className="disabled-link">🔗 Live</a>
+              <a href="https://github.com/ahamedajaj01/feedback_app" className="disabled-link">💻 Code</a>
+            </div>
+          </div>
+          {/* Project 5 */}
+          <div className="project-grid">
+            <div className="project-level-name">Coming soon</div>
+            <strong></strong><br />
+            <div className="project-image">
+              <img src="#" alt="new project" />
+            </div>
+            <p>New project</p>
             <div className="project-view">
               <a href="#" className="disabled-link">🔗 Live</a>
               <a href="#" className="disabled-link">💻 Code</a>
             </div>
           </div>
+
         </div>
 
         <hr className="section-divider" />
