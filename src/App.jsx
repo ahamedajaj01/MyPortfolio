@@ -91,11 +91,10 @@ function App() {
                 <strong>- Fullstack Developer</strong>
               </p>
               <br />
-              <p>
-                A passionate fresher exploring
-                <strong> Python (Django)</strong> and{" "}
-                <strong>JavaScript</strong>, focused on building clean,
-                responsive web experiences.
+                <p>
+                A web developer learning and building projects with
+                <strong> JavaScript and Python,</strong> focused on creating clean, responsive web{" "}
+                applications using<strong> Django and Django REST Framework.</strong>
               </p>
               <a href="#contact">
                 <button className="get-in-touch">Get in touch</button>
@@ -118,9 +117,10 @@ function App() {
               about creating responsive and user-friendly web applications.
             </p>
             <p>
-              My main focus is on JavaScript, React, HTML, and CSS for the
-              frontend, and I'm currently expanding my backend skills with
-              Python and Django.
+              I build web applications using JavaScript, React, HTML, and CSS on
+              the frontend, and Python, Django, Django REST Framework, and SQL
+              on the backend. Most of my learning comes from building projects
+              and understanding how frontend and backend work together.
             </p>
             <p>
               I’m always eager to learn, explore new technologies, and
@@ -177,6 +177,13 @@ function App() {
             >
               <i className="fa-solid fa-leaf" style={{ color: "#092e20" }}></i>{" "}
               Django
+            </div>
+            <div
+              className="skill-box"
+              data-tooltip="Powerful toolkit for building Web APIs in Django"
+            >
+              <i className="fa-solid fa-plug" style={{ color: "#0d6efd" }}></i>{" "}
+              Django REST Framework
             </div>
 
             <div
@@ -306,7 +313,9 @@ function App() {
           <div className="project-grid">
             <div className="project-level-name">Full-Stack Project</div>
             <strong>Chat Application</strong>
-            <p>React · Django · Django REST · WebSockets · Redis · PostgreSQL</p>
+            <p>
+              React · Django · Django REST · WebSockets · Redis · PostgreSQL
+            </p>
             <br />
             <div className="project-image">
               <img src={chatapp} alt="new project" />
