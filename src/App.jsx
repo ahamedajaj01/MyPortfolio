@@ -1,15 +1,15 @@
-import { useEffect,useState,useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./App.css";
 import blogify from "./assets/blogify.png";
 import complaintApp from "./assets/complaintApp.png";
 import iNotebook from "./assets/iNotebook.png";
 import fedback from "./assets/fedback.png";
+import chatapp from "./assets/chatapp.png";
 import MyResume from "./assets/My_Resume.pdf";
 const templateId = import.meta.env.VITE_META_TEMPLATE_ID;
 const serviceId = import.meta.env.VITE_META_SERVICE_ID;
 const publicKey = import.meta.env.VITE_META_PUBLIC_KEY;
-
 
 function App() {
   const [menuActive, setMenuActive] = useState(false);
@@ -21,11 +21,12 @@ function App() {
     }
   }, []);
 
-const contactForm = useRef();
+  const contactForm = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm(serviceId, templateId, contactForm.current, publicKey)
+    emailjs
+      .sendForm(serviceId, templateId, contactForm.current, publicKey)
       .then(() => {
         alert("Message sent successfully!");
       })
@@ -40,22 +41,36 @@ const contactForm = useRef();
     <>
       {/* ========================== NAVBAR ============================= */}
       <nav className="nav-container">
-        <button className="nav-toggle" aria-label="Toggle navigation" onClick={()=> setMenuActive(!menuActive)}>
+        <button
+          className="nav-toggle"
+          aria-label="Toggle navigation"
+          onClick={() => setMenuActive(!menuActive)}
+        >
           ☰
         </button>
         <div className="my-portfolio">
           <a href="#home">MyPortfolio</a>
         </div>
-        <div className={`nav-content ${menuActive? "active":""}`}>
+        <div className={`nav-content ${menuActive ? "active" : ""}`}>
           <ul className="ul-content">
             <div className="option">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#project">Project</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#project">Project</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
             </div>
             <div className="resume">
-              <li><a href={MyResume}>Resume</a></li>
+              <li>
+                <a href={MyResume}>Resume</a>
+              </li>
             </div>
           </ul>
         </div>
@@ -64,7 +79,10 @@ const contactForm = useRef();
       {/* ========================== HERO SECTION ============================= */}
       <main>
         <section className="hero" id="home">
-          <div className="hero-content" style={{marginTop: menuActive? "100px":"0"}}>
+          <div
+            className="hero-content"
+            style={{ marginTop: menuActive ? "100px" : "0" }}
+          >
             <div className="my-image"></div>
 
             <div className="hero-text">
@@ -118,73 +136,96 @@ const contactForm = useRef();
         {/* ========================== SKILLS SECTION ============================= */}
         <section className="skills-section" id="skills">
           <h2>Skills</h2>
-         <div className="skills-container">
-  <div
-    className="skill-box"
-    data-tooltip="Web structure with semantic tags"
-  >
-    <i className="fab fa-html5" style={{ color: "#e34f26" }}></i> HTML
-  </div>
+          <div className="skills-container">
+            <div
+              className="skill-box"
+              data-tooltip="Web structure with semantic tags"
+            >
+              <i className="fab fa-html5" style={{ color: "#e34f26" }}></i> HTML
+            </div>
 
-  <div
-    className="skill-box"
-    data-tooltip="Responsive layouts, Flex/Grid, animations"
-  >
-    <i className="fab fa-css3-alt" style={{ color: "#1572b6" }}></i> CSS
-  </div>
+            <div
+              className="skill-box"
+              data-tooltip="Responsive layouts, Flex/Grid, animations"
+            >
+              <i className="fab fa-css3-alt" style={{ color: "#1572b6" }}></i>{" "}
+              CSS
+            </div>
 
-  <div
-    className="skill-box"
-    data-tooltip="Dynamic web functionality & DOM manipulation"
-  >
-    <i className="fab fa-js" style={{ color: "#f7df1e" }}></i> JavaScript
-  </div>
+            <div
+              className="skill-box"
+              data-tooltip="Dynamic web functionality & DOM manipulation"
+            >
+              <i className="fab fa-js" style={{ color: "#f7df1e" }}></i>{" "}
+              JavaScript
+            </div>
 
-  <div
-    className="skill-box"
-    data-tooltip="High-level programming language for automation, data science & web apps"
-  >
-    <i className="fa-brands fa-python" style={{ color: "#3776ab" }}></i> Python
-  </div>
+            <div
+              className="skill-box"
+              data-tooltip="High-level programming language for automation, data science & web apps"
+            >
+              <i
+                className="fa-brands fa-python"
+                style={{ color: "#3776ab" }}
+              ></i>{" "}
+              Python
+            </div>
 
-  <div
-    className="skill-box"
-    data-tooltip="High-level Python web framework for rapid and secure web app development"
-  >
-    <i className="fa-solid fa-leaf" style={{ color: "#092e20" }}></i> Django
-  </div>
+            <div
+              className="skill-box"
+              data-tooltip="High-level Python web framework for rapid and secure web app development"
+            >
+              <i className="fa-solid fa-leaf" style={{ color: "#092e20" }}></i>{" "}
+              Django
+            </div>
 
-  <div
-    className="skill-box"
-    data-tooltip="Structured Query Language used to manage and query relational databases"
-  >
-    <i className="fa-solid fa-database" style={{ color: "#f29111" }}></i> SQL
-  </div>
+            <div
+              className="skill-box"
+              data-tooltip="Structured Query Language used to manage and query relational databases"
+            >
+              <i
+                className="fa-solid fa-database"
+                style={{ color: "#f29111" }}
+              ></i>{" "}
+              SQL
+            </div>
 
-  <div className="skill-box" data-tooltip="Built SPA, components, hooks">
-    <i className="fab fa-react" style={{ color: "#61dafb" }}></i> React
-  </div>
+            <div
+              className="skill-box"
+              data-tooltip="Built SPA, components, hooks"
+            >
+              <i className="fab fa-react" style={{ color: "#61dafb" }}></i>{" "}
+              React
+            </div>
 
-  <div className="skill-box" data-tooltip="Version control, collaboration">
-    <i className="fab fa-git-alt" style={{ color: "#f1502f" }}></i> Git & GitHub
-  </div>
-</div>
-
+            <div
+              className="skill-box"
+              data-tooltip="Version control, collaboration"
+            >
+              <i className="fab fa-git-alt" style={{ color: "#f1502f" }}></i>{" "}
+              Git & GitHub
+            </div>
+          </div>
         </section>
 
         <hr className="section-divider" />
 
         {/* ========================== PROJECTS SECTION ============================= */}
-        <h2 style={{ marginLeft: "2.5rem" }} id="project">Projects</h2>
+        <h2 style={{ marginLeft: "2.5rem" }} id="project">
+          Projects
+        </h2>
         <div className="project-container">
           {/* Project 1 */}
           <div className="project-grid">
             <div className="project-level-name">Full Stack MERN Project</div>
-            <strong>- iNotebook - Book in Cloud</strong><br />
+            <strong>- iNotebook - Book in Cloud</strong>
+            <br />
             <div className="project-image">
               <img src={iNotebook} alt="iNotebook" />
             </div>
-            <p><strong>🛠️ Tech Stack:</strong> React, Node.js, Express, MongoDB</p>
+            <p>
+              <strong>🛠️ Tech Stack:</strong> React, Node.js, Express, MongoDB
+            </p>
             <p>Stay organized with iNotebook — a secure notes app.</p>
             <div className="project-view">
               <a href="https://i-notebook-beta-sable.vercel.app/">🔗 Live</a>
@@ -195,11 +236,15 @@ const contactForm = useRef();
           {/* Project 2 */}
           <div className="project-grid">
             <div className="project-level-name">Advanced Frontend Project</div>
-            <strong>📝 Blogify – A Modern Blogging Platform</strong><br />
+            <strong>📝 Blogify – A Modern Blogging Platform</strong>
+            <br />
             <div className="project-image">
               <img src={blogify} alt="Blogify" />
             </div>
-            <p><strong>🛠️ Tech Stack:</strong> React, Redux Toolkit, Appwrite, Tailwind</p>
+            <p>
+              <strong>🛠️ Tech Stack:</strong> React, Redux Toolkit, Appwrite,
+              Tailwind
+            </p>
             <p>A feature-rich blog platform with CRUD and authentication.</p>
             <div className="project-view">
               <a href="https://my-blog-ashy-phi.vercel.app">🔗 Live</a>
@@ -209,12 +254,18 @@ const contactForm = useRef();
 
           {/* Project 3 */}
           <div className="project-grid">
-            <div className="project-level-name">Complaint Management Platform</div>
-            <strong>🗂️ ComplaintApp</strong><br />
+            <div className="project-level-name">
+              Complaint Management Platform
+            </div>
+            <strong>🗂️ ComplaintApp</strong>
+            <br />
             <div className="project-image">
               <img src={complaintApp} alt="ComplaintApp" />
             </div>
-            <p><strong>🛠️ Tech Stack:</strong> React, Redux Toolkit, Vite, Appwrite</p>
+            <p>
+              <strong>🛠️ Tech Stack:</strong> React, Redux Toolkit, Vite,
+              Appwrite
+            </p>
             <p>A full-stack complaint management app with admin panel.</p>
             <div className="project-view">
               <a href="https://complaintapp-five.vercel.app/login">🔗 Live</a>
@@ -225,31 +276,63 @@ const contactForm = useRef();
           {/* Project 4 */}
           <div className="project-grid">
             <div className="project-level-name">Full-Stack Project</div>
-            <strong>🚀 Django Feedback App</strong><br />
+            <strong>🚀 Django Feedback App</strong>
+            <p>Python . Django . MySQL . Bootstrap5</p>
+            <br />
             <div className="project-image">
               <img src={fedback} alt="feedbackApp" />
             </div>
-            <p>A Django-based web application that allows users to submit feedback,
-    view responses, and manage entries through an admin dashboard.</p>
+            <p>
+              A Django-based web application that allows users to submit
+              feedback, view responses, and manage entries through an admin
+              dashboard.
+            </p>
             <div className="project-view">
-              <a href="https://feedbackapp-production-d50a.up.railway.app/" className="disabled-link">🔗 Live</a>
-              <a href="https://github.com/ahamedajaj01/feedback_app" className="disabled-link">💻 Code</a>
+              <a
+                href="https://feedbackapp-production-d50a.up.railway.app/"
+                className="disabled-link"
+              >
+                🔗 Live
+              </a>
+              <a
+                href="https://github.com/ahamedajaj01/feedback_app"
+                className="disabled-link"
+              >
+                💻 Code
+              </a>
             </div>
           </div>
           {/* Project 5 */}
           <div className="project-grid">
-            <div className="project-level-name">Coming soon</div>
-            <strong></strong><br />
+            <div className="project-level-name">Full-Stack Project</div>
+            <strong>Chat Application</strong>
+            <p>React · Django · Django REST · WebSockets · Redis · PostgreSQL</p>
+            <br />
             <div className="project-image">
-              <img src="#" alt="new project" />
+              <img src={chatapp} alt="new project" />
             </div>
-            <p>New project</p>
+            <p>
+              A full-stack chat application built with React and Django. The
+              project demonstrates real-time communication, API integration,
+              authentication, and backend–frontend separation. It was developed
+              incrementally as part of my learning process, with a focus on
+              understanding how production-style systems are structured.
+            </p>
             <div className="project-view">
-              <a href="#" className="disabled-link">🔗 Live</a>
-              <a href="#" className="disabled-link">💻 Code</a>
+              <a
+                href="https://chat-app-phi-ruddy-92.vercel.app/"
+                className="disabled-link"
+              >
+                🔗 Live
+              </a>
+              <a
+                href="https://github.com/ahamedajaj01/chatApp"
+                className="disabled-link"
+              >
+                💻 Code
+              </a>
             </div>
           </div>
-
         </div>
 
         <hr className="section-divider" />
@@ -262,25 +345,50 @@ const contactForm = useRef();
           </p>
 
           <div className="contact-container">
-            <form ref={contactForm} onSubmit={sendEmail} className="contact-form" id="contact-form">
+            <form
+              ref={contactForm}
+              onSubmit={sendEmail}
+              className="contact-form"
+              id="contact-form"
+            >
               <input type="text" name="name" placeholder="Your Name" required />
-              <input type="email" name="email" placeholder="Your Email" required />
-              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Your Message"
+                required
+              ></textarea>
               <button type="submit">Send Message</button>
             </form>
 
             <div className="contact-info">
               <h3>Let's Connect</h3>
-              <p><strong>Email:</strong> ahamed.ajaj01@gmail.com</p>
+              <p>
+                <strong>Email:</strong> ahamed.ajaj01@gmail.com
+              </p>
               <p>
                 <strong>LinkedIn:</strong>{" "}
-                <a href="https://linkedin.com/in/ajaj-ahamed-323369364" target="_blank" rel="noreferrer">
+                <a
+                  href="https://linkedin.com/in/ajaj-ahamed-323369364"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   View Profile
                 </a>
               </p>
               <p>
                 <strong>GitHub:</strong>{" "}
-                <a href="https://github.com/ahamedajaj01" target="_blank" rel="noreferrer">
+                <a
+                  href="https://github.com/ahamedajaj01"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Visit Repo
                 </a>
               </p>
@@ -292,11 +400,35 @@ const contactForm = useRef();
       {/* ========================== FOOTER ============================= */}
       <footer className="footer-container">
         <p>
-          <a href="https://github.com/ahamedajaj01" target="_blank" rel="noreferrer">GitHub</a> |
-          <a href="https://linkedin.com/in/ajaj-ahamed-323369364" target="_blank" rel="noreferrer"> LinkedIn</a> |
-          <a href="mailto:ahamed.ajaj01@gmail.com" target="_blank" rel="noreferrer"> Email</a>
+          <a
+            href="https://github.com/ahamedajaj01"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>{" "}
+          |
+          <a
+            href="https://linkedin.com/in/ajaj-ahamed-323369364"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            LinkedIn
+          </a>{" "}
+          |
+          <a
+            href="mailto:ahamed.ajaj01@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            Email
+          </a>
         </p>
-        <p><a href="#">Back to top ↑</a></p>
+        <p>
+          <a href="#">Back to top ↑</a>
+        </p>
         <p className="copyright">
           &copy; <span id="year"></span> Ajaj Ahamed. All rights reserved.
         </p>
