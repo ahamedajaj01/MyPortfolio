@@ -6,7 +6,7 @@ import complaintApp from "./assets/complaintApp.png";
 import iNotebook from "./assets/iNotebook.png";
 import fedback from "./assets/fedback.png";
 import chatapp from "./assets/chatapp.png";
-import MyResume from "./assets/My_Resume.pdf";
+import MyResume from "./assets/My-Resume.pdf";
 const templateId = import.meta.env.VITE_META_TEMPLATE_ID;
 const serviceId = import.meta.env.VITE_META_SERVICE_ID;
 const publicKey = import.meta.env.VITE_META_PUBLIC_KEY;
