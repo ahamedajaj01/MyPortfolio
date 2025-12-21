@@ -60,6 +60,21 @@ const links = [
               {item.label}
             </a>
           ))}
+           {/* Resume */}
+  <a
+    href="/My-Resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      flex items-center gap-2
+      rounded-lg px-4 py-3
+      text-sm font-medium
+      text-violet-400
+      hover:bg-slate-800
+    "
+  >
+    📄 Resume
+  </a>
         </nav>
 
         {/* Bottom */}
