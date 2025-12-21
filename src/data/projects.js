@@ -21,7 +21,7 @@ export const projects = [
       "postgreSQL",
       "WebSocket",
     ],
-    live: "https://chat-app-phi-ruddy-92.vercel.app/",
+    live: "https://my-chat-app-demo.vercel.app/",
   },
   {
     id: 2,
