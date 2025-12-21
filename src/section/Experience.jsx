@@ -24,6 +24,7 @@ export default function Experience() {
           <div className="
             relative rounded-2xl border border-slate-800
             bg-slate-900/40 p-8
+            bg:backdrop-blur-lg
           ">
 
             {/* Timeline dot */}
@@ -45,12 +46,12 @@ export default function Experience() {
             </p>
 
             {/* Meta */}
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-white bg:text-white">
               Sep 2025 – Dec 2025 · 4 months · Kathmandu, Nepal (Hybrid)
             </p>
 
             {/* Responsibilities */}
-            <ul className="mt-6 space-y-3 text-slate-400">
+            <ul className="mt-6 space-y-3 text-white dark:text-slate-400">
               <li>• Built backend features using Django and Django REST Framework, including authentication and CRUD APIs.</li>
               <li>• Designed and integrated REST APIs with frontend clients using React and JavaScript.</li>
               <li>• Worked with MySQL and SQLite using Django ORM for database modeling and queries.</li>
