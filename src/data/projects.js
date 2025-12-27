@@ -78,4 +78,16 @@ export const projects = [
     tech: ["React", "Redux", "Bootstrap", "JavaScript", "Appwrite"],
     live: "https://complaintapp-five.vercel.app",
   },
+  {
+    id: 6,
+    title: "Student Management System",
+    description:
+      "A modern, full-stack academic management portal built to streamline the connection between students and mentors. This system provides a centralized hub for tracking academic progress, managing assignments, and maintaining student-mentor relationships.",
+    image: "images/sms.png",
+    year: 2025,
+    status: "Active",
+    tags: ["Web", "Frontend", "Backend", "Fullstack"],
+    tech: ["React", "Context API", "Tailwind CSS", "DJANGO", "Django REST Framework", "postgreSQL"],
+    live: "https://student-management-system-demo.vercel.app",
+  },
 ];
