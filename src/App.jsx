@@ -40,7 +40,7 @@ export default function App() {
   return (
     <div className="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
       {/* Mobile header */}
-      <header className="lg:hidden flex items-center justify-between px-4 py-4 border-b border-slate-200 dark:border-slate-800">
+      <header className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-4 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/90 backdrop-blur">
         <button onClick={() => setSidebarOpen(true)} className="text-slate-600 dark:text-slate-300">
           ☰
         </button>

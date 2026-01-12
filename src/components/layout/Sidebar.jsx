@@ -62,7 +62,7 @@ const links = [
           ))}
            {/* Resume */}
   <a
-    href="/My-Resume.pdf"
+    href="/Full-Stack_Ajaj_Resume.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="
