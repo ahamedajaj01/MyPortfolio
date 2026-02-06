@@ -145,12 +145,14 @@ export default function Contact() {
                 label="Full Name *"
                 name="name"
                 placeholder="Your full name"
+                required
               />
               <Input
                 label="Email Address *"
                 placeholder="your@email.com"
                 type="email"
                 name="email"
+                required
               />
             </div>
 
@@ -158,12 +160,14 @@ export default function Contact() {
               label="Subject"
               placeholder="What’s this about?"
               name="subject"
+              required
             />
 
             <Textarea
               label="Message *"
               name="message"
               placeholder="Tell me about your project, ideas, or just say hello…"
+              required
             />
 
             {/* Submit */}
