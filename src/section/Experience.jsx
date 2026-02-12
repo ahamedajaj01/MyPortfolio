@@ -31,7 +31,7 @@ export default function Experience() {
             <p className="mt-1 text-slate-300">Leaftclutch Technologies</p>
 
             <p className="mt-1 text-sm text-slate-400">
-              December 2025 – Present
+              August 2025 – Present
             </p>
 
             <ul className="mt-6 space-y-3 text-slate-300">
