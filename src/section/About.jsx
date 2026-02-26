@@ -29,7 +29,7 @@ export default function About() {
             </h3>
 
             <p className="mt-4 text-slate-700 dark:text-slate-400">
-              I’m a backend-focused Full-Stack Developer Intern with hands-on
+              I’m a backend-focused Full-Stack Developer with hands-on
               experience building and maintaining REST APIs and database-driven
               web applications. I work primarily on backend development,
               including API design, request validation, and relational data
