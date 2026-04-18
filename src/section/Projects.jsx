@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/ui/ProjectCard";
+import { LayoutGrid, ExternalLink } from "lucide-react";
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -11,121 +13,117 @@ export default function Projects() {
     activeFilter === "All"
       ? projects
       : projects.filter((project) =>
-          project.tags.includes(activeFilter)
-        );
+        project.tags.includes(activeFilter)
+      );
 
   return (
-    <section id="projects" className="py-32">
-      <div className="mx-auto max-w-6xl px-6">
-
+    <section id="projects" className="py-32 relative">
+      <div className="mx-auto max-w-6xl px-6 relative z-10">
         {/* Header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="
-            inline-flex items-center gap-2
-            rounded-full bg-violet-500/10
-            px-4 py-2 text-sm
-            text-violet-500
-          ">
-            ✦ Featured Work
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mx-auto max-w-3xl text-center"
+        >
+          <span className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-sm font-semibold text-primary">
+            <LayoutGrid size={16} />
+            Showcase
           </span>
 
-          <h2 className="
-            mt-6 text-4xl font-bold
-            text-slate-900
-            dark:text-white
-          ">
-            Projects & Case Studies
+          <h2 className="mt-6 text-5xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tight">
+            Selected <span className="text-gradient">Projects</span>
           </h2>
 
-          <p className="
-            mt-4
-            text-slate-600
-            dark:text-slate-400
-          ">
-            A showcase of my recent work, from concept to deployment
+          <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
+            A curated collection of my work, ranging from complex backend architectures to polished frontend experiences.
           </p>
-        </div>
+        </motion.div>
 
         {/* Filters */}
-        <div className="mt-12 flex flex-wrap justify-center gap-3">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16 flex flex-wrap justify-center gap-3"
+        >
           {filters.map((tag) => (
-            <button
+            <motion.button
               key={tag}
               onClick={() => setActiveFilter(tag)}
+              whileHover={{ y: -2 }}
+              whileTap={{ y: 0 }}
               className={`
-                rounded-full px-4 py-2 text-sm
-                border transition
-
-                ${
-                  activeFilter === tag
-                    ? "bg-violet-600 text-white border-violet-600"
-                    : `
-                        border-slate-300 text-slate-700 hover:bg-slate-100
-                        dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800
-                      `
+                relative rounded-full px-6 py-2 text-sm font-bold transition-all duration-300
+                ${activeFilter === tag
+                  ? "bg-primary text-white shadow-lg shadow-primary/25"
+                  : "glass text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary"
                 }
               `}
             >
               {tag}
-            </button>
+              {activeFilter === tag && (
+                <motion.div
+                  layoutId="activeFilter"
+                  className="absolute inset-0 rounded-full border-2 border-primary/50"
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                />
+              )}
+            </motion.button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Grid */}
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {filterProjects.length > 0 ? (
-            filterProjects.map((project) => (
+        <motion.div
+          layout
+          className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+        >
+          <AnimatePresence mode="popLayout">
+            {filterProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
-            ))
-          ) : (
-            <div className="
-              col-span-full text-center
-              text-slate-600
-              dark:text-slate-400
-            ">
-              <p className="text-xl font-medium">
-                No projects found
-              </p>
-              <p className="mt-1 text-sm">
-                Try selecting a different category
-              </p>
-            </div>
-          )}
-        </div>
+            ))}
+          </AnimatePresence>
 
-        <hr className="mt-24 border-slate-200 dark:border-slate-800" />
+          {filterProjects.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="col-span-full py-20 text-center"
+            >
+              <p className="text-2xl font-bold text-slate-600 dark:text-slate-400">
+                No projects found in this category.
+              </p>
+            </motion.div>
+          )}
+        </motion.div>
 
         {/* Footer CTA */}
-        <div className="mt-32 text-center">
-          <h3 className="
-            text-2xl font-semibold
-            text-slate-900
-            dark:text-white
-          ">
-            Interested in working together?
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="mt-40 glass rounded-3xl p-12 text-center"
+        >
+          <h3 className="text-3xl font-black text-slate-900 dark:text-white">
+            Have a project in mind?
           </h3>
 
-          <p className="
-            mt-3
-            text-slate-600
-            dark:text-slate-400
-          ">
-            Let’s discuss your project and create something amazing.
+          <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
+            I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
           </p>
 
-          <a
+          <motion.a
             href="#contact"
-            className="
-              mt-8 inline-block rounded-xl
-              bg-violet-600 px-6 py-3
-              font-medium text-white
-              hover:bg-violet-500
-            "
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-10 inline-flex items-center gap-2 rounded-2xl bg-primary px-10 py-4 font-bold text-white shadow-xl shadow-primary/20 hover:bg-primary-dark transition-all duration-300"
           >
-            Start a Project
-          </a>
-        </div>
+            Start a Conversation
+            <ExternalLink size={20} />
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );
 }
+

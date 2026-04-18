@@ -8,17 +8,13 @@ import Experience from '../section/Experience';
 
 function Home() {
   return (
-    <>
-    <Hero/>
-    <hr/>
-    <Projects/>
-    <hr/>
-    <Experience/>
-    <hr/>
-    <About/>
-    <hr/>
-      <Contact/>
-    </>
+    <div className="flex flex-col">
+      <Hero />
+      <Projects />
+      <Experience />
+      <About />
+      <Contact />
+    </div>
   )
 }
 
