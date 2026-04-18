@@ -46,7 +46,7 @@ export default function About() {
               </h3>
 
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                I’m a backend-focused <span className="text-primary font-bold">Full-Stack Developer</span> with a obsession for architectural elegance. My journey began with a deep curiosity about how large-scale systems handle millions of requests while remaining lightning fast.
+                I’m a backend-focused <span className="text-primary font-bold">Full-Stack Developer</span> with hands-on experience building and maintaining scalable REST APIs and database-driven web applications. My journey began with a curiosity about how applications handle millions of requests behind the scenes, leading me to specialize in backend architecture and request optimization.
               </p>
 
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
