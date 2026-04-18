@@ -36,19 +36,18 @@ export default function Contact() {
     setError("");
 
     try {
-      // It's best to use the form object directly with the public key
-      const result = await emailjs.sendForm(
-        serviceId,
-        templateId,
-        contactForm.current,
-        { publicKey: publicKey }
-      );
+      const templateParams = {
+        name: contactForm.current.name.value,
+        email: contactForm.current.email.value,
+        subject: contactForm.current.subject.value,
+        message: contactForm.current.message.value,
+        to_email: "ahamed.ajaj01@gmail.com", // Fallback for templates with dynamic recipients
+      };
 
-      if (result.status === 200) {
-        setSuccess(true);
-        contactForm.current.reset();
-        setTimeout(() => setSuccess(false), 5000);
-      }
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      setSuccess(true);
+      contactForm.current.reset();
+      setTimeout(() => setSuccess(false), 5000);
     } catch (err) {
       console.error("EmailJS Error:", err);
       setError(err?.text || "Failed to send message. Check your EmailJS configuration.");
