@@ -115,7 +115,7 @@ export default function About() {
         <div className="mt-24 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 text-center">
           {[
             { icon: Award, value: "Full-Stack", label: "Expertise Focus" },
-            { icon: Cpu, value: "10+", label: "Projects Built" },
+            { icon: Cpu, value: "5+", label: "Projects Built" },
             { icon: Rocket, value: "Nepal", label: "Based Location" },
             { icon: Globe, value: "2025", label: "Active Since" },
           ].map((stat, i) => (
