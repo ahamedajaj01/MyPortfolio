@@ -36,7 +36,8 @@ export default function Projects() {
           </h2>
 
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            A curated collection of my work, ranging from complex backend architectures to polished frontend experiences.
+            Some of the projects I've worked on, from backend development with Django and FastAPI to full-stack applications built with React and Next.js.
+
           </p>
         </motion.div>
 

@@ -53,17 +53,20 @@ export default function Hero() {
         {/* Value proposition */}
         <motion.div variants={itemVariants}>
           <h2 className="mt-4 text-3xl md:text-5xl font-bold bg-linear-to-r from-slate-900 via-slate-700 to-slate-500 dark:from-white dark:via-slate-300 dark:to-slate-500 bg-clip-text text-transparent">
-            Crafting Scalable Full-Stack Solutions
+           Building Full-Stack Web Applications
           </h2>
         </motion.div>
 
-        {/* Supporting text */}
+       
         <motion.p
-          variants={itemVariants}
-          className="mt-6 max-w-2xl text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
-        >
-          Backend Specialist with a deep love for <span className="text-primary font-semibold">Python/Django</span> and <span className="text-secondary font-semibold">React</span>. I build robust systems that feel magic and look premium.
-        </motion.p>
+variants={itemVariants}
+className="mt-6 max-w-2xl text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
+
+>
+
+Full Stack Developer with a strong backend focus, building web applications with <span className="text-primary font-semibold">Django</span>, <span className="text-primary font-semibold">FastAPI</span>, and modern frontend technologies like <span className="text-secondary font-semibold">React</span> and <span className="text-secondary font-semibold">Next.js</span>. I enjoy creating reliable systems, clean APIs, and intuitive user experiences.
+</motion.p>
+
 
         {/* CTAs */}
         <motion.div variants={itemVariants} className="mt-10 flex flex-wrap gap-4">
@@ -121,11 +124,11 @@ export default function Hero() {
           <div className="flex items-center gap-6 text-sm font-medium text-slate-500 dark:text-slate-500">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span>Birtamode, Nepal</span>
+              <span>kathmandu, Nepal</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary" />
-              <span>Full-Stack Enthusiast</span>
+              <span>Full-Stack Developer</span>
             </div>
           </div>
         </motion.div>

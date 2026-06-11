@@ -26,7 +26,8 @@ export default function About() {
           </h2>
 
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
-            I craft the digital backbone of modern applications, focusing on performance, security, and scalability.
+           From backend architecture to frontend interfaces, I enjoy building applications that are both practical and enjoyable to use.
+
           </p>
         </motion.div>
 
