@@ -1,6 +1,37 @@
 
 
 export const projects = [
+  
+    {
+  id: 0,
+
+  title: "ShareChautari",
+
+  description:
+    "A full-stack social platform for Nepal's stock market community. Contributed to the backend by developing REST APIs, implementing authentication, integrating Alibaba Cloud OSS for media uploads, and building email notification features while collaborating through Git and pull requests.",
+
+  image: "images/sharechautari.png",
+
+  year: 2026,
+
+  status: "Active",
+
+  tags: ["Web", "Full Stack", "Production"],
+
+  tech: [
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT",
+    "Alibaba Cloud OSS",
+    "Nodemailer",
+    "JavaScript",
+    "Git",
+    "Postman"
+  ],
+
+  live: "https://dev.sharechautari.com/"
+},
   {
     id: 1,
     title: "Chat Application",
