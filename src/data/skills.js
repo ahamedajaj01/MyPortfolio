@@ -4,7 +4,7 @@ export const skills = [
   { name: "Django REST Framework", level: 85, category: "Backend" },
   {name: "FastAPI", level: 70, category: "Backend" },
   { name: "Node.js", level: 70, category: "Backend" },
-{ name: "Express.js", level: 75, category: "Backend" },  
+{ name: "Express.js", level: 70, category: "Backend" },  
   { name: "SQL (MySQL /PostgreSQL / SQLite)", level: 82, category: "Database" },
 
   { name: "JavaScript (ES6+)", level: 75, category: "Frontend" },
