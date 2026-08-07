@@ -8,40 +8,40 @@ const experiences = [
     location: "Remote / Hybrid",
     period: "August 2025 – Present",
     description: [
-      "Building backend for production web applications using FastAPI and Django.",
-      "Developing admin APIs with request validation, role-aware access, and complex DB operations.",
-      "Designing relational data models and stable API contracts in collaboration with frontend teams.",
-      "Participating in code reviews and managing workflows with Git and pull requests."
+      "Developing backend APIs using Django and FastAPI.",
+      "Working on admin features, authentication, and database operations.",
+      "Building and maintaining REST APIs for web applications.",
+      "Collaborating with the team using Git and pull requests."
     ],
-    tech: ["Python", "FastAPI", "Django", "REST APIs", "SQL", "Git"],
+    tech: ["Python", "Django", "FastAPI", "REST APIs", "SQL", "Git"],
     color: "primary"
   },
   {
     title: "Freelance Full-Stack Developer",
-    company: "Independent / Contract-based",
+    company: "Independent",
     location: "Remote",
     period: "2025 – Present",
     description: [
-      "Delivering end-to-end features for client web applications (SaaS & E-commerce).",
-      "Designing REST APIs, authentication flows, and relational database schemas.",
-      "Implementing CRUD operations and role-based access for real-world scaling use cases.",
-      "Direct client communication for requirement gathering and feature delivery."
+      "Building web applications based on client requirements.",
+      "Developing backend APIs using Node.js, Express.js, FastApi and DRF.",
+      "Implementing authentication, CRUD operations, and database integration.",
+      "Fixing bugs and adding new features to existing projects."
     ],
-    tech: ["Python", "Flask", "Django", "FastAPI", "React", "PostgreSQL"],
+    tech: ["Django","FastApi","Node.js", "Express.js", "MongoDB", "React", "JavaScript", "Git"],
     color: "secondary"
   },
   {
-    title: "Python & Django Specialist Training",
+    title: "Python & Django Training",
     company: "Broadway Infosys",
     location: "Kathmandu, Nepal",
     period: "August 2025 – November 2025",
     description: [
-      "Mastered Django & Django REST Framework for enterprise-level applications.",
-      "Integrated complex REST APIs with React-based interactive frontends.",
-      "Optimized MySQL and SQLite queries using Django ORM and profiling tools.",
-      "Implemented clean code principles and MVC architecture patterns."
+      "Learned Django, Django REST Framework, and FastAPI.",
+      "Built REST APIs and integrated them with React applications.",
+      "Worked with MySQL, SQLite, and Django ORM.",
+      "Developed full-stack projects during the training."
     ],
-    tech: ["Python", "Django", "DRF", "React", "JavaScript", "SQL"],
+    tech: ["Python", "Django", "DRF", "FastAPI", "React", "SQL"],
     color: "accent"
   }
 ];
